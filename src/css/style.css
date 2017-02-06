@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+body {
+    color: #666;
+    font-family: sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    color: #ffffff;
+    font-size: 50px;
+}
+
+h2 {
+    color: #70ccd7;
+    font-size: 24px;
+    padding: 15px 0 0 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    padding: 10px 0;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+a {
+    color: #888;
+    text-decoration: none;
+}
+
+header {
+    line-height: 66px;
+    background-color: #070f13;
+    text-align: center;
+    border-bottom: 1px solid #70ccd7;
+}
+
+.logo {
+    width: 262px;
+    vertical-align: middle;
+}
+
+.container {
+    background: linear-gradient(#000102, #081e29);
+}
+
+.wrapper_band {
+    position: relative;
+    overflow: hidden;
+}
+
+.bands {
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #244246;
+}
+
+.search {
+    width: 270px;
+    margin: 8px;
+    line-height: 28px;
+    border-radius: 14px;
+    padding-left: 10px;
+    border: none;
+    background-color: #284f54;
+}
+
+.wrapper_sort {
+    line-height: 38px;
+    border-top: 1px solid #244246;
+    border-bottom: 1px solid #244246;
+}
+
+.wrapper_sort span {
+    float: left;
+}
+
+.select_sort {
+    width: 70px;
+    font-size: 16px;
+    margin-left: 30px;
+    color: #545555;
+    background: #010405;
+    border: none;
+}
+
+.list_bands li {
+    padding: 5px 0 5px 35px;
+    background: url("../img/icon_song.png") no-repeat 10px 6px;
+}
+
+.list_bands li:hover {
+    background-color: #1d3538;
+}
+
+.about_band {
+    display: flex;
+    padding: 20px;
+    background-color: #0c1719;
+}
+
+.active_band {
+    color: #fff;
+    background: url("../img/icon_song_active.png") no-repeat 10px 6px !important;
+}
+
+.about_band img {
+    width: 250px;
+    height: 250px;
+}
+
+.rate {
+    content: "";
+    display: block;
+    width: 127px;
+    height: 17px;
+}
+
+.rate1 {
+    background: url("../img/rates/star_rate1.png") no-repeat;
+}
+
+.rate2 {
+    background: url("../img/rates/star_rate2.png") no-repeat;
+}
+
+.rate3 {
+    background: url("../img/rates/star_rate3.png") no-repeat;
+}
+
+.rate4 {
+    background: url("../img/rates/star_rate4.png") no-repeat;
+}
+
+.rate5 {
+    background: url("../img/rates/star_rate5.png") no-repeat;
+}
+
+.wrapper_content {
+    margin: 22px 22px 22px 322px;
+}
+
+.albums {
+    display: none;
+}
+
+.album_img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    padding: 20px;
+    margin: 0 20px 20px 0;
+    border-right: 1px solid #10191d;
+}
+
+.wrapper {
+    float: left;
+}
+
+.list_albums li {
+    margin: 12px 12px 12px 20px;
+    background: #10242a;
+}
+
+.album_name {
+    padding-left: 40px;
+    background: url("../img/icon_song_album.png") no-repeat 7px 7px;
+}
+
+.active_album_name {
+    color: #fff;
+    background: url("../img/icon_song_album_active.png") no-repeat 7px 7px;
+}
+
+.album_active {
+    display: block;
+}
+
+.album_hide {
+    display: none;
+}
+
+.content_band {
+    margin-left: 25px;
+}
+
+ol {
+    font-size: 14px;
+}
+
+ol li {
+    position: relative;
+    padding: 5px 0 5px 30px;;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    list-style: inherit;
+}
+
+ol li a {
+    display: block;
+    padding-left: 20px;
+}
+
+li.playing, li.playing a {
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+li.playing:before {
+    content: '?';
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    color: #fff;
+    font-size: 13px;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    height: 150px;
+    font-size: 14px;
+    background-color: #000;
+}
+
+.footer_wrapper {
+    margin: 0 auto;
+    width: 410px;
+    text-align: center;
+}
+
+footer img {
+    width: 190px;
+    height: 110px;
+}
+
+@media screen and (max-width: 1024px) {
+    .bands {
+        width: 200px;
+    }
+
+    .search {
+        width: 170px;
+    }
+
+    .wrapper_content {
+        margin: 22px 22px 22px 222px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about_band {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .bands {
+        width: 300px;
+        position: inherit;
+    }
+
+    .search {
+        width: 270px;
+    }
+
+    .wrapper_content {
+        margin: 0;
+    }
+
+    .footer_wrapper {
+        width: 260px;
+    }
+}
