@@ -6,6 +6,7 @@ import $ from 'jquery';
 import {Http} from './components/http.js';
 import {Band} from './components/band.js';
 import {sort} from './components/sort.js';
+import {showBandName} from './components/showBandName.js';
 
 let bands = [];
 let bandsShort = [];
@@ -15,24 +16,14 @@ Http.fetchData(URL)
     .then(responseData => {
         bands = responseData.bands;
 
-        for (let e of responseData.bands) {
+        for (let e of bands) {
             const band = new Band(e.band_name, e.origin, e.rate);
             bandsShort.push(band);
         }
-
-        writeBandName();
+        showBandName(bandsShort);
     })
     .catch(error => console.log(error));
 
-
 export {bands};
 
-let writeBandName = () => {
-
-    for (let e of bandsShort) {
-        let bandName = e.name;
-        let $liBandName = $('<li>${bandName}</li>');
-        $('.list_bands').append($liBandName);
-    }
-    bandsShort = sort(bandsShort);
-}
+bandsShort = sort(bandsShort);
