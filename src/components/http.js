@@ -1,5 +1,5 @@
 /**
- * Created by Vania on 06.02.2017.
+ * Created by ivan.datsiv on 2/6/2017.
  */
 
 export class Http {
@@ -12,7 +12,6 @@ export class Http {
                     const RESPONSE_DATA = JSON.parse(HTTP.responseText);
                     resolve(RESPONSE_DATA);
                 } else if (HTTP.readyState == XMLHttpRequest.DONE) {
-                    console.log('jo');
                     reject('Something went wrong');
                 }
             };

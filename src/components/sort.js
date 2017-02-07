@@ -9,8 +9,8 @@ import {compareName, compareOrigin, compareRate} from './compareMethods.js';
 import {player} from './player.js';
 
 
-let sort = (bandsShort1) => {
-    let bandsShort = bandsShort1;
+let sort = (bands) => {
+    let bandsShort = bands;
     $("select")
         .change(function () {
             let sortValue = "";
@@ -34,6 +34,6 @@ let sort = (bandsShort1) => {
         })
         .trigger("change");
     return bandsShort;
-}
+};
 
 export {sort};

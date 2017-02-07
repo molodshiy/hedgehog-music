@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-.clearfix:after {
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
@@ -42,6 +42,9 @@ a {
 }
 
 header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
     line-height: 66px;
     background-color: #070f13;
     text-align: center;
@@ -54,10 +57,12 @@ header {
 }
 
 .container {
+    padding-top: 66px;
     background: linear-gradient(#000102, #081e29);
 }
 
 .wrapper_band {
+    min-height: calc(100vh - 217px);
     position: relative;
     overflow: hidden;
 }
@@ -72,15 +77,24 @@ header {
 
 .search {
     width: 270px;
-    margin: 8px;
-    line-height: 28px;
+    height: 28px;
+    margin: 10px;
     border-radius: 14px;
     padding-left: 10px;
+    font-size: 16px;
+    color: #284f54;
     border: none;
-    background-color: #284f54;
+    background: #091213 url("../img/search.png") no-repeat 250px 6px;
+    outline: none;
+}
+
+.search::-webkit-input-placeholder {
+    font-size: 16px;
+    color: #284f54;
 }
 
 .wrapper_sort {
+    color: #284f54;
     line-height: 38px;
     border-top: 1px solid #244246;
     border-bottom: 1px solid #244246;
@@ -88,20 +102,38 @@ header {
 
 .wrapper_sort span {
     float: left;
+    margin-left: 16px;
 }
 
 .select_sort {
+    float: right;
     width: 70px;
     font-size: 16px;
-    margin-left: 30px;
+    margin: 10px 10px 0 0;
+    padding-bottom: 3px;
     color: #545555;
-    background: #010405;
+    background: #010405 url("../img/triangle.png") no-repeat 60px 7px;
     border: none;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+option {
+    outline: none;
 }
 
 .list_bands li {
-    padding: 5px 0 5px 35px;
-    background: url("../img/icon_song.png") no-repeat 10px 6px;
+    padding: 6px 0 6px 46px;
+    background: url("../img/icon_song.png") no-repeat 15px 6px;
+}
+
+.list_bands li:first-child {
+    margin-top: 10px;
 }
 
 .list_bands li:hover {
@@ -116,7 +148,7 @@ header {
 
 .active_band {
     color: #fff;
-    background: url("../img/icon_song_active.png") no-repeat 10px 6px !important;
+    background: url("../img/icon_song_active.png") no-repeat 20px 6px !important;
 }
 
 .about_band img {
@@ -221,8 +253,8 @@ li.playing, li.playing a {
     text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
 
-li.playing:before {
-    content: '?';
+li.playing::before {
+    content: '♬';
     position: absolute;
     left: 8px;
     top: 4px;
@@ -255,6 +287,7 @@ footer img {
 
     .search {
         width: 170px;
+        background-position: 150px;
     }
 
     .wrapper_content {
@@ -277,10 +310,12 @@ footer img {
 
     .search {
         width: 270px;
+        background-position: 250px;
     }
 
     .wrapper_content {
-        margin: 0;
+        margin: 22px;
+        min-width: 270px;
     }
 
     .footer_wrapper {
