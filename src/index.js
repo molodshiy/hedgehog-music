@@ -2,6 +2,7 @@
  * Created by ivan.datsiv on 2/6/2017.
  */
 
+import "babel-polyfill";
 import {Http} from './components/http.js';
 import {Band} from './components/band.js';
 import {sort} from './components/sort.js';

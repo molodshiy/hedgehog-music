@@ -26,7 +26,8 @@ h1 {
 h2 {
     color: #70ccd7;
     font-size: 24px;
-    padding: 15px 0 0 10px;
+    padding: 0 10px;
+    line-height: 48px;
     text-transform: uppercase;
 }
 
@@ -62,7 +63,7 @@ header {
 }
 
 .wrapper_band {
-    min-height: calc(100vh - 217px);
+    min-height: calc(100vh - 216px);
     position: relative;
     overflow: hidden;
 }
@@ -76,15 +77,16 @@ header {
 }
 
 .search {
-    width: 270px;
+    width: 280px;
+    box-sizing: border-box;
     height: 28px;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
     border-radius: 14px;
-    padding-left: 10px;
+    padding: 0 30px 0 10px;
     font-size: 16px;
     color: #284f54;
     border: none;
-    background: #091213 url("../img/search.png") no-repeat 250px 6px;
+    background: #091213 url("../img/search.png") no-repeat 254px 6px;
     outline: none;
 }
 
@@ -112,7 +114,7 @@ header {
     margin: 10px 10px 0 0;
     padding-bottom: 3px;
     color: #545555;
-    background: #010405 url("../img/triangle.png") no-repeat 60px 7px;
+    background: #030b10 url("../img/triangle.png") no-repeat 60px 7px;
     border: none;
     outline: none;
     -moz-appearance: none;
@@ -286,8 +288,10 @@ footer img {
     }
 
     .search {
-        width: 170px;
-        background-position: 150px;
+        width: 180px;
+        background-position: 154px;
+        padding-right: 30px;
+        box-sizing: border-box;
     }
 
     .wrapper_content {
@@ -303,14 +307,29 @@ footer img {
 
 @media screen and (max-width: 550px) {
 
-    .bands {
-        width: 300px;
-        position: inherit;
+    .toolbar {
+        display: flex;
+        height: 48px;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .toolbar form {
+        width: 100%;
     }
 
     .search {
-        width: 270px;
-        background-position: 250px;
+        margin: 0 10px 0 10px;
+        width: 95%;
+        background-position: 95%;
+        padding-right: 12%;
+        box-sizing: border-box;
+    }
+
+    .bands {
+        width: 100%;
+        position: inherit;
+        border: none;
     }
 
     .wrapper_content {
