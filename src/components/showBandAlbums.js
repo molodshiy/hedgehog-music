@@ -3,15 +3,15 @@
  */
 
 import $ from 'jquery';
-import {bands} from './../index.js';
 import {player} from './player.js';
+import {band} from './showBand.js';
 
-function showBandAlbums(bandId) {
+function showBandAlbums() {
     $('.albums').show();
     let listAlbums = $('.list_albums');
     let albumName = 0;
     listAlbums.text("");
-    let albums = bands[bandId - 1].albums;
+    let albums = band.albums;
     albums.forEach(function (s, i) {
         var boxPlayer = $('<div class = "album_hide clearfix"></div>');
         albumName = $('<h3 class="album_name">' + s.name + " - " + albums[i].year + '</h3>');
@@ -42,7 +42,7 @@ function changeClassActive() {
 
     $('.wrapper').remove();
     $('.album_active').append('<div class="wrapper"></div>');
-    player();
+    player(band);
 }
 
 

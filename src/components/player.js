@@ -3,16 +3,17 @@
  */
 
 import $ from 'jquery';
-import {bands} from './../index.js';
 
-function player() {
+function player(band) {
+    console.log(band);
     $('.wrapper').append('<audio preload></audio> <ol class="list_songs"></ol>')
 
-    var songs = bands[0].albums[0].songs;
+    var songs = band.albums[0].songs;
 
-    for (var i = 0; i < songs.length; i++) {
-        $('.list_songs').append('<li><a href="#" data-src="src/info/mp3/muse/showbiz/' + songs[i] + '.mp3"></a>' + songs[i] + '</li>');
-    }
+        for (var i = 0; i < songs.length; i++) {
+            $('.list_songs').append('<li><a href="#" data-src="src/info/mp3/muse/showbiz/' + songs[i] + '.mp3"></a>' + songs[i] + '</li>');
+        }
+
 
     // Setup the player to autoplay the next track
     var a = audiojs.createAll({

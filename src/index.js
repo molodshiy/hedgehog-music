@@ -8,20 +8,22 @@ import {Band} from './components/band.js';
 import {sort} from './components/sort.js';
 import {showBandName} from './components/showBandName.js';
 
-let bands = [];
 let bandsShort = [];
 
-const URL = 'src/info/bands.json';
-Http.fetchData(URL)
-    .then(responseData => {
-        bands = responseData.bands;
+const URLbandsName = 'src/info/bands.json';
 
-        for (let e of bands) {
+/*Load the names bands*/
+Http.fetchData(URLbandsName)
+    .then(responseData => {
+
+        for (let e of responseData.bands) {
             const band = new Band(e.band_name, e.origin, e.rate);
             bandsShort.push(band);
         }
-        bandsShort = sort(bandsShort);
+        showBandName(bandsShort);
     })
     .catch(error => console.log(error));
 
-export {bands};
+
+/*Checking the sort select*/
+bandsShort = sort(bandsShort);

@@ -3,13 +3,12 @@
  */
 
 import $ from 'jquery';
-import {bands} from './../index.js';
 import {showBandName} from './showBandName.js';
 import {compareName, compareOrigin, compareRate} from './compareMethods.js';
 import {player} from './player.js';
 
 
-let sort = (bands) => {
+function sort (bands) {
     let bandsShort = bands;
     $("select")
         .change(function () {

@@ -1,0 +1,65 @@
+{
+  "id": 1,
+  "band_name": "MUSE",
+  "members": [
+    "Matt Bellamy",
+    "Chris Wolstenholme",
+    "Dominic Howard"
+  ],
+  "country": "UK",
+  "rate": 3,
+  "origin": 1992,
+  "band_photo": "muse.jpg",
+  "about_band": "Muse are an English rock band from Teignmouth, Devon, formed in 1994. The band consists of Matt Bellamy (lead vocals, guitar, piano, keyboards), Chris Wolstenholme (bass guitar, backing vocals, keyboards) and Dominic Howard (drums, percussion).",
+  "albums": [
+    {
+      "name": "Showbiz",
+      "cover": "showbiz.jpg",
+      "year": 1999,
+      "songs": [
+        "Cave",
+        "Escape",
+        "Falling Down",
+        "Fillip",
+        "Hate This Ill Love You",
+        "Muscle Museum",
+        "Overdue",
+        "Showbiz",
+        "Sober",
+        "Sunburn",
+        "Unintended",
+        "Uno"
+      ]
+    },
+    {
+      "name": "Origin of Symmetry",
+      "cover": "origin_of_symmetry.jpg",
+      "year": 2001
+    },
+    {
+      "name": "Absolution",
+      "cover": "absolution.jpg",
+      "year": 2003
+    },
+    {
+      "name": "Black Holes and Revelations",
+      "cover": "black_holes_and_revelations.jpg",
+      "year": 2006
+    },
+    {
+      "name": "The Resistance",
+      "cover": "resistance.jpg",
+      "year": 2009
+    },
+    {
+      "name": "The 2nd Law",
+      "cover": "2nd_law.jpg",
+      "year": 2012
+    },
+    {
+      "name": "Drones",
+      "cover": "drones.jpg",
+      "year": 2015
+    }
+  ]
+}

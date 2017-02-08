@@ -1,0 +1,47 @@
+{
+  "id": 3,
+  "band_name": "SOAD",
+  "members": [
+    "Serj Tankian",
+    "Daron Malakian",
+    "Shavo Odadjian",
+    "John Dolmayan"
+  ],
+  "country": "AM",
+  "rate": 5,
+  "origin": 1995,
+  "band_photo": "soad.jpg",
+  "about_band": "System of a Down, sometimes shortened to SOAD or System, is a four-piece Armenian-American rock band formed in 1994 in Glendale, California, in the United States. The band currently consists of Serj Tankian (lead vocals, keyboards), Daron Malakian (vocals, guitar), Shavo Odadjian (bass, backing vocals) and John Dolmayan (drums).",
+  "albums": [
+    {
+      "name": "Back in Black",
+      "cover": "resistance.jpg",
+      "year": 1980
+    },
+    {
+      "name": "For Those About to Rock We Salute You",
+      "cover": "resistance.jpg",
+      "year": 1981
+    },
+    {
+      "name": "Flick of the Switch",
+      "cover": "resistance.jpg",
+      "year": 1983
+    },
+    {
+      "name": "Fly on the Wall",
+      "cover": "resistance.jpg",
+      "year": 1980
+    },
+    {
+      "name": "Blow Up Your Video",
+      "cover": "resistance.jpg",
+      "year": 1988
+    },
+    {
+      "name": "The Razors Edge",
+      "cover": "resistance.jpg",
+      "year": 1990
+    }
+  ]
+}
