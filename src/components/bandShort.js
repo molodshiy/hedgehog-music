@@ -2,7 +2,7 @@
  * Created by ivan.datsiv on 2/6/2017.
  */
 
-class Band {
+class BandShort {
     constructor(name, origin, rate) {
         this._name = name;
         this._origin = origin;
@@ -22,4 +22,4 @@ class Band {
     }
 }
 
-export {Band};
+export {BandShort};

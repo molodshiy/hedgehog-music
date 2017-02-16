@@ -4,11 +4,11 @@
 
 import "babel-polyfill";
 import {Http} from './components/http.js';
-import {Band} from './components/band.js';
-import {sort} from './components/sort.js';
-import {showBandName} from './components/showBandName.js';
+import {BandShort} from './components/bandShort.js';
+import {BandsNames} from './components/BandsNames.js';
 
 let bandsShort = [];
+let listId = 'bands';
 
 const URLbandsName = 'src/info/bands.json';
 
@@ -17,13 +17,13 @@ Http.fetchData(URLbandsName)
     .then(responseData => {
 
         for (let e of responseData.bands) {
-            const band = new Band(e.band_name, e.origin, e.rate);
+            const band = new BandShort(e.band_name, e.origin, e.rate);
             bandsShort.push(band);
         }
-        showBandName(bandsShort);
+
+        let listName = new BandsNames(listId, bandsShort);
+        listName.showBandName();
+        listName.sort();
+
     })
     .catch(error => console.log(error));
-
-
-/*Checking the sort select*/
-bandsShort = sort(bandsShort);
