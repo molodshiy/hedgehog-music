@@ -2,7 +2,7 @@
  * Created by Vania on 06.02.2017.
  */
 
-import {showBand, changeClass} from './showBand.js';
+import {Band} from './Band.js';
 import {compareName, compareOrigin, compareRate} from './compareMethods.js';
 
 class BandsNames {
@@ -14,7 +14,6 @@ class BandsNames {
     }
 
     showBandName() {
-
         this.actName = this.findActiveBandName();
         let list = this.findList();
 
@@ -29,8 +28,10 @@ class BandsNames {
             }
 
             li.addEventListener('click', () => {
-                showBand(name);
-                changeClass(li)
+                let band = new Band(name);
+                /*Add to localStorage*/
+                this.changeActiveClass(li);
+                band.showBand();
             });
 
             list.appendChild(li);
@@ -76,6 +77,18 @@ class BandsNames {
                     break;
             }
             this.showBandName();
+        }
+    }
+
+    changeActiveClass(li) {
+        let list = document.getElementById(this._listId).children;
+
+        for(let e of list){
+            e.classList.remove("active_band");
+
+            if(e == li){
+                e.classList.add("active_band");
+            }
         }
     }
 }

@@ -10,10 +10,9 @@ function player(band) {
 
     var songs = band.albums[0].songs;
 
-        for (var i = 0; i < songs.length; i++) {
-            $('.list_songs').append('<li><a href="#" data-src="src/info/mp3/muse/showbiz/' + songs[i] + '.mp3"></a>' + songs[i] + '</li>');
-        }
-
+    for (var i = 0; i < songs.length; i++) {
+        $('.list_songs').append('<li><a href="#" data-src="src/info/mp3/muse/showbiz/' + songs[i] + '.mp3"></a>' + songs[i] + '</li>');
+    }
 
     // Setup the player to autoplay the next track
     var a = audiojs.createAll({

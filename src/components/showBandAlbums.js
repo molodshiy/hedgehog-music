@@ -4,14 +4,14 @@
 
 import $ from 'jquery';
 import {player} from './player.js';
-import {band} from './showBand.js';
 
-function showBandAlbums() {
+function showBandAlbums(band) {
     $('.albums').show();
     let listAlbums = $('.list_albums');
     let albumName = 0;
     listAlbums.text("");
     let albums = band.albums;
+
     albums.forEach(function (s, i) {
         var boxPlayer = $('<div class = "album_hide clearfix"></div>');
         albumName = $('<h3 class="album_name">' + s.name + " - " + albums[i].year + '</h3>');
@@ -23,20 +23,21 @@ function showBandAlbums() {
         var imgAlbum = '<img class= "album_img" src="' + albumImgSrc + '">';
         boxPlayer.append(imgAlbum);
     });
-    listAlbums.children().on('click', changeClassActive);
+
+    listAlbums.children().on('click', function () {changeClassActive(this, band)});
 }
 
-function changeClassActive() {
+function changeClassActive(that, band) {
 
-    $(this).off('click');
+    $(that).off('click');
 
     $('.active_album_name').removeClass('active_album_name');
-    $(this).children().filter($('.album_name')).addClass('active_album_name');
+    $(that).children().filter($('.album_name')).addClass('active_album_name');
 
     $('.album_active').addClass('album_hide')
         .removeClass('album_active');
 
-    $(this).find('.album_hide')
+    $(that).find('.album_hide')
         .removeClass('album_hide')
         .addClass('album_active');
 
